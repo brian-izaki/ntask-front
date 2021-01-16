@@ -1,0 +1,26 @@
+{
+  "name": "ntask-front",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build && npm run server",
+    "server": "http-server public -p 3001",
+    "build": "npm run browserify && npm run terser",
+    "browserify": "browserify src -o public/js/app.js -t [babelify --presets [@babel/preset-env]]  ",
+    "terser": "terser public/js/app.js -o public/js/app.min.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "babelify": "^10.0.0",
+    "browser-request": "^0.3.3",
+    "browserify": "^17.0.0",
+    "http-server": "^0.12.3",
+    "terser": "^5.5.1",
+    "tiny-emitter": "^2.1.0"
+  },
+  "devDependencies": {}
+}
