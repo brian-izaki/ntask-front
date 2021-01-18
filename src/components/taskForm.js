@@ -21,13 +21,13 @@ class TaskForm extends NTask {
     const form = this.body.querySelector("form");
     form.addEventListener("submit", (e) => {
       e.preventDefault();
-      const tssk = e.target.querySelector("[data-task]");
+      const task = e.target.querySelector("[data-task]");
       const opts = {
         method: "POST",
-        url: `${this.URL}/taks`,
+        url: `${this.URL}/tasks`,
         json: true,
         headers: {
-          athorization: localStorage.getItem("token"),
+          authorization: localStorage.getItem("token"),
         },
         body: {
           tittle: task.value,

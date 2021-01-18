@@ -12,7 +12,7 @@ class User extends NTask {
   }
 
   addEventListener() {
-    this.userCacelClick();
+    this.userCancelClick();
   }
 
   renderUserData() {

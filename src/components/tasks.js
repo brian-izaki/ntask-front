@@ -4,7 +4,7 @@ const Template = require("../templates/tasks");
 class Tasks extends NTask {
   constructor(body) {
     super();
-    this.body - body;
+    this.body = body;
   }
 
   render() {
@@ -16,7 +16,7 @@ class Tasks extends NTask {
     this.taskRemoveClick();
   }
 
-  renderTakList() {
+  renderTaskList() {
     const opts = {
       method: "GET",
       url: `${this.URL}/tasks`,
@@ -41,7 +41,7 @@ class Tasks extends NTask {
       dones[i].addEventListener("click", (e) => {
         e.preventDefault();
         const id = e.target.getAttribute("data-task-id");
-        const done = e.target.getAttribute("data-task-done");
+        const done = !e.target.getAttribute("data-task-done");
         const opts = {
           method: "PUT",
           url: `${this.URL}/tasks/${id}`,

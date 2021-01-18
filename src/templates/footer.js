@@ -6,9 +6,9 @@ exports.render = (path) => {
   return `<div class="tabs-striped tabs-color-calm">
     <div class="tabs">
       <a data-path="tasks" class="tab-item ${isTasks}">
-        <i class="icon ion_home"></i>
+        <i class="icon ion-home"></i>
       </a>
-      <a data-path="taskForm" class="tab-iten ${isTaskForm}">
+      <a data-path="taskForm" class="tab-item ${isTaskForm}">
         <i class="icon ion-compose"></i>
       </a>
       <a data-path="user" class="tab-item ${isUser}">

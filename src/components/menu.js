@@ -27,7 +27,7 @@ class Menu extends NTask {
       links[i].addEventListener("click", (e) => {
         e.preventDefault();
         const link = e.target.parentElement; // retorna o objeto HTML ao qual o alvo pertence
-        const path = link.gerAttribute("data-path"); // pega o valor atribuido ao data-path especificado no template
+        const path = link.getAttribute("data-path"); // pega o valor atribuido ao data-path especificado no template
         this.emit("click", path);
       });
     }
