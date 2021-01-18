@@ -19,7 +19,7 @@ Foi desenvolvido o front-end sem framework, foi utilizado apenas algumas depend�
 
 ## inicializar aplicação
 
-- precisa inicializar a api ntask.
+- precisa inicializar a [api ntask](https://github.com/brian-izaki/ntask).
 - utilizar o comando `npm start`
 - ir para o link http://localhost:3001
 
